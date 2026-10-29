@@ -47,3 +47,4 @@ npm run build
 ```
 
 The latest local run passed 194 automated tests and the production build. A real Twilio call and phone press-1 acknowledgment were verified. Location speech was added afterward and tested locally. These checks do not establish clinical detection accuracy.
+# GuardianLens
