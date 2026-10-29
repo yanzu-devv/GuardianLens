@@ -1,0 +1,6 @@
+# MediaPipe's legacy Pose API and bundled full-complexity model.
+mediapipe==0.10.21
+numpy==1.26.4
+# MediaPipe requires the contrib distribution. It includes the opencv-python cv2 API.
+# Install one OpenCV distribution, not both wheels into the same environment.
+opencv-contrib-python==4.11.0.86

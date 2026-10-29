@@ -1,0 +1,14 @@
+{
+  "mode": "full_body",
+  "visibility_threshold": 0.6,
+  "hip_drop_threshold": 0.15,
+  "hip_drop_window": 0.5,
+  "fall_angle": 60.0,
+  "upright_angle": 25.0,
+  "fall_hold_seconds": 4.0,
+  "slump_angle": 35.0,
+  "head_drop_threshold": 0.1,
+  "slump_hold_seconds": 8.0,
+  "max_slump_motion": 0.025,
+  "cooldown_seconds": 30.0
+}

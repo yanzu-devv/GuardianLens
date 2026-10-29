@@ -1,0 +1,12 @@
+{
+  "mode": "seated",
+  "visibility_threshold": 0.6,
+  "seated_calibration_seconds": 1.0,
+  "seated_calibration_tilt": 5.0,
+  "seated_tilt_angle": 25.0,
+  "seated_head_angle": 25.0,
+  "seated_head_drop": 0.3,
+  "seated_shoulder_drop": 0.35,
+  "seated_hold_seconds": 2.0,
+  "cooldown_seconds": 30.0
+}

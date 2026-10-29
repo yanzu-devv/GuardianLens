@@ -1,0 +1,38 @@
+.launch-experience{min-height:100dvh}
+.is-introducing>.launch-content{animation:guardian-dashboard-reveal var(--intro-duration) both}
+.launch-intro{position:fixed;inset:0;z-index:100;display:grid;place-items:center;overflow:hidden;background:#080b09;animation:guardian-intro-backdrop var(--intro-duration) linear both}
+.launch-brand{position:relative;display:grid;place-items:center;width:100%;height:100%;isolation:isolate}
+.launch-mark{position:absolute;left:50%;top:50%;width:clamp(86px,12vw,112px);height:auto;transform:translate(-50%,-50%);transform-origin:center;will-change:transform,opacity;animation:guardian-logo-zoom var(--intro-duration) both}
+.launch-wordmark{position:absolute;top:calc(50% + 83px);margin:0;color:#f2f6ef;font-size:clamp(25px,4vw,32px);font-weight:550;letter-spacing:-1.1px;line-height:1.2;animation:guardian-wordmark-exit var(--intro-duration) both}
+.launch-wordmark>span{color:#b6ff3b}
+.launch-skip{position:absolute;right:max(28px,env(safe-area-inset-right));bottom:max(24px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:14px;min-height:44px;padding:10px 6px;border:0;background:transparent;color:#a5b2a7;font-size:12px;letter-spacing:.03em}
+.launch-skip>span{color:#b6ff3b;font-size:18px}
+.launch-skip:hover{color:#f2f6ef}
+@keyframes guardian-logo-zoom{
+  0%{opacity:0;transform:translate(-50%,-50%) scale(.94)}
+  12%,44%{opacity:1;transform:translate(-50%,-50%) scale(1);animation-timing-function:cubic-bezier(.7,0,.22,1)}
+  78%{opacity:1}
+  100%{opacity:0;transform:translate(-50%,-50%) scale(42)}
+}
+@keyframes guardian-wordmark-exit{
+  0%{opacity:0;transform:translateY(6px)}
+  16%,44%{opacity:1;transform:translateY(0)}
+  62%,100%{opacity:0;transform:translateY(8px)}
+}
+@keyframes guardian-intro-backdrop{
+  0%,62%{background:#080b09;opacity:1}
+  100%{background:#080b0900;opacity:0}
+}
+@keyframes guardian-dashboard-reveal{
+  0%,57%{opacity:0}
+  100%{opacity:1}
+}
+@media(max-width:700px){
+  .launch-wordmark{top:calc(50% + 68px)}
+  .launch-skip{right:max(22px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){
+  .launch-intro,.launch-mark,.launch-wordmark,.is-introducing>.launch-content{animation:none}
+  .launch-mark{will-change:auto}
+  .is-introducing>.launch-content{visibility:hidden}
+}

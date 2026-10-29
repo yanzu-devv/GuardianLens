@@ -1,0 +1,37 @@
+{
+  "name": "guardianlens",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local-first possible-collapse prototype with an explicitly simulated response plan",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "tsx src/server/index.ts --dev",
+    "start": "tsx src/server/index.ts",
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test tests/*.test.ts",
+    "desktop": "tsx scripts/desktop.ts",
+    "prepare:desktop": "node node_modules/electron/install.js",
+    "prepare:models": "node scripts/prepare-models.mjs",
+    "callbacks": "tsx scripts/callbacks.ts"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "1.2.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/ws": "^8.18.0",
+    "electron": "45.1.0",
+    "tsx": "^4.20.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}
